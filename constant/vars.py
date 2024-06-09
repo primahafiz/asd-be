@@ -2,6 +2,7 @@ from .type import *
 
 # Audio file
 SAMPLE_RATE = 16000
+PATH_TMP = './data/tmp/'
 
 # Spectrogram
 F_MIN = 60.0

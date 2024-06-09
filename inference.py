@@ -4,13 +4,13 @@ import torch
 from feature import *
 from torchvision.transforms import ToTensor
 
-def inferenceUNetIDNN(featureType: FeatureType, machineType: MachineType, id: int):
+def inferenceUNetIDNN(featureType: FeatureType, machineType: MachineType, id: int, audioFilePath: str):
     model = UNetIdnn(NUM_LAYER_UNETIDNN_GAMMATONE)
     model.load_state_dict(torch.load(UNET_IDNN_PATH[featureType.value][machineType.value][id],map_location=torch.device('cpu')))
 
     model.eval()
 
-    extractedFeature = expandSpectrogram(extractGammatoneFromPath('./data/sample/valve0abn_00000001.wav'))
+    extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
     extractedFeature = np.array([extractedFeature],dtype='float32')
 
     transform = ToTensor()
@@ -22,13 +22,13 @@ def inferenceUNetIDNN(featureType: FeatureType, machineType: MachineType, id: in
 
     return loss.item()
 
-def inferenceIDNN(featureType: FeatureType, machineType: MachineType, id: int):
+def inferenceIDNN(featureType: FeatureType, machineType: MachineType, id: int, audioFilePath: str):
     model = Idnn()
     model.load_state_dict(torch.load(IDNN_PATH[featureType.value][machineType.value][id],map_location=torch.device('cpu')))
 
     model.eval()
 
-    extractedFeature = expandSpectrogram(extractGammatoneFromPath('./data/sample/slider6abn_00000003.wav'))
+    extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
     extractedFeature = np.array([extractedFeature],dtype='float32')
 
     transform = ToTensor()

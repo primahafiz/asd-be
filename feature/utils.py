@@ -2,6 +2,10 @@ import numpy as np
 from constant import *
 import matplotlib.pyplot as plt
 import copy
+import time
+from PIL import Image
+import io
+from base64 import b64encode
 
 def downSampleSpectrogram(filterResult:np.ndarray, scaling:int = 1):
 
@@ -50,8 +54,28 @@ def convertSpectrogramToVisualizedForm(spectrogram:np.ndarray):
 
 def visualizeSpectrogram(spectrogram:np.ndarray):
     _, ax = plt.subplots(1, 1, tight_layout=True)
+    plt.xticks([])
+    plt.yticks([])
+    plt.xlabel('Time')
+    plt.ylabel('Frequency')
     ax.imshow(spectrogram,interpolation='none', cmap='magma')
-    plt.show()
+
+def getImageSpectrogram(spectrogram:np.ndarray):
+    _, ax = plt.subplots(1,1,tight_layout=True)
+    plt.xticks([])
+    plt.yticks([])
+    plt.xlabel('Time')
+    plt.ylabel('Frequency')
+    ax.imshow(spectrogram,interpolation='none', cmap='magma')
+
+    newPath = PATH_TMP + str(int(time.time())) + 'spectrogram.png'
+    plt.savefig(newPath, bbox_inches='tight')
+
+    bytesArr = []
+    with open(newPath, 'rb') as f:
+        bytesArr = f.read()
+
+    return b64encode(bytesArr)
 
 def expandSpectrogram(spectrogram:np.ndarray):
     res = copy.deepcopy(spectrogram.tolist())
@@ -59,3 +83,13 @@ def expandSpectrogram(spectrogram:np.ndarray):
         for j in range(len(spectrogram)-1):
             res.append(np.concatenate((spectrogram[j,i*64:],spectrogram[j+1,:i*64])).tolist())
     return np.array(res)
+
+def getFeatureType(val:str):
+    for f in FeatureType:
+        if f.value == val:
+            return f
+        
+def getMachineType(val:str):
+    for m in MachineType:
+        if m.value == val:
+            return m
