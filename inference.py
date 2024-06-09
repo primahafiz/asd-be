@@ -21,3 +21,21 @@ def inferenceUNetIDNN(featureType: FeatureType, machineType: MachineType, id: in
     loss = model.calcLoss(extractedFeature,nn.MSELoss())
 
     return loss.item()
+
+def inferenceIDNN(featureType: FeatureType, machineType: MachineType, id: int):
+    model = Idnn()
+    model.load_state_dict(torch.load(IDNN_PATH[featureType.value][machineType.value][id],map_location=torch.device('cpu')))
+
+    model.eval()
+
+    extractedFeature = expandSpectrogram(extractGammatoneFromPath('./data/sample/slider6abn_00000003.wav'))
+    extractedFeature = np.array([extractedFeature],dtype='float32')
+
+    transform = ToTensor()
+    extractedFeature = transform(extractedFeature)
+    extractedFeature = extractedFeature.transpose(0,1).transpose(1,2)
+    
+    model.setLossStats(IDNN_STATS[featureType.value][machineType.value][id]['mean'],IDNN_STATS[featureType.value][machineType.value][id]['std'])
+    loss = model.calcLoss(extractedFeature,nn.MSELoss())
+
+    return loss.item()

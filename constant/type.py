@@ -6,7 +6,7 @@ class FeatureType(Enum):
 
 class ModelType(Enum):
     UNETIDNN = 'unetidnn'
-    AEIDNN = 'aeidnn'
+    AEIDNN = 'idnn'
     UNET = 'unet'
     AE = 'ae'
 
