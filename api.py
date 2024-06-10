@@ -37,6 +37,7 @@ async def process(
     model : str = Form(...),
     machineType : str = Form(...),
     machineId : str = Form(...),
+    threshold : str = Form(...),
     files : UploadFile = File(...)
     ):
 
@@ -59,7 +60,8 @@ async def process(
 
     return{
         'spectrogramImage':bytesImage,
-        'loss':loss
+        'loss':loss,
+        'threshold':float(threshold)
     }
 
 if __name__ == "__main__":
