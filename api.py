@@ -56,7 +56,10 @@ async def process(
         loss = inferenceUNetIDNN(getFeatureType(feature),getMachineType(machineType),int(machineId), newFilePath)
     elif model == ModelType.AEIDNN.value:
         loss = inferenceIDNN(getFeatureType(feature),getMachineType(machineType),int(machineId), newFilePath)
-    # TODO: Other model type
+    elif model == ModelType.UNET.value:
+        loss = inferenceUNet(getFeatureType(feature),getMachineType(machineType),int(machineId), newFilePath)
+    elif model == ModelType.AE.value:
+        loss = inferenceAE(getFeatureType(feature),getMachineType(machineType),int(machineId), newFilePath)
 
     return{
         'spectrogramImage':bytesImage,

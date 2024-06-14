@@ -8,7 +8,7 @@ class ModelType(Enum):
     UNETIDNN = 'unetidnn'
     AEIDNN = 'idnn'
     UNET = 'unet'
-    AE = 'ae'
+    AE = 'autoencoder'
 
 class MachineType(Enum):
     SLIDER = 'slider'
