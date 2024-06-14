@@ -10,7 +10,13 @@ def inferenceUNetIDNN(featureType: FeatureType, machineType: MachineType, id: in
 
     model.eval()
 
-    extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    extractedFeature = np.array([],dtype='float32')
+
+    if featureType.value == FeatureType.GAMMATONE.value:
+        extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    elif featureType.value == FeatureType.LOGMEL.value:
+        extractedFeature = expandSpectrogram(extractLogMelFromPath(audioFilePath))
+        
     extractedFeature = np.array([extractedFeature],dtype='float32')
 
     transform = ToTensor()
@@ -28,7 +34,13 @@ def inferenceIDNN(featureType: FeatureType, machineType: MachineType, id: int, a
 
     model.eval()
 
-    extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    extractedFeature = np.array([],dtype='float32')
+
+    if featureType.value == FeatureType.GAMMATONE.value:
+        extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    elif featureType.value == FeatureType.LOGMEL.value:
+        extractedFeature = expandSpectrogram(extractLogMelFromPath(audioFilePath))
+        
     extractedFeature = np.array([extractedFeature],dtype='float32')
 
     transform = ToTensor()
@@ -46,7 +58,13 @@ def inferenceUNet(featureType: FeatureType, machineType: MachineType, id: int, a
 
     model.eval()
 
-    extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    extractedFeature = np.array([],dtype='float32')
+
+    if featureType.value == FeatureType.GAMMATONE.value:
+        extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    elif featureType.value == FeatureType.LOGMEL.value:
+        extractedFeature = expandSpectrogram(extractLogMelFromPath(audioFilePath))
+        
     extractedFeature = np.array([extractedFeature],dtype='float32')
 
     transform = ToTensor()
@@ -64,7 +82,13 @@ def inferenceAE(featureType: FeatureType, machineType: MachineType, id: int, aud
 
     model.eval()
 
-    extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    extractedFeature = np.array([],dtype='float32')
+
+    if featureType.value == FeatureType.GAMMATONE.value:
+        extractedFeature = expandSpectrogram(extractGammatoneFromPath(audioFilePath))
+    elif featureType.value == FeatureType.LOGMEL.value:
+        extractedFeature = expandSpectrogram(extractLogMelFromPath(audioFilePath))
+
     extractedFeature = np.array([extractedFeature],dtype='float32')
 
     transform = ToTensor()

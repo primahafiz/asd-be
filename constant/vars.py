@@ -160,6 +160,23 @@ AE_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][2] = {'mean':838.6
 AE_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][4] = {'mean':999.3321008300782  ,'std':403.0262429558882}
 AE_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][6] = {'mean':925.4919493432138  ,'std':262.12964649361993}
 
+AE_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][0] = {'mean':12.27461813263974  ,'std':3.8949891505234997}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][2] = {'mean':15.11864849726359   ,'std':4.042797145771021}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][4] = {'mean':11.61592926979065   ,'std':5.409055245713924}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][6] = {'mean':10.918512479464214   ,'std':3.5045246944806814}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][0] = {'mean':12.943723260686639   ,'std':4.797178744446813}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][2] = {'mean':4.797178744446813  ,'std':3.3427124655136504}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][4] = {'mean':16.029850348997652   ,'std':3.5098851281599313}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][6] = {'mean':15.749767325141214   ,'std':4.543140358894665}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][0] = {'mean':6.946994891894862   ,'std':1.6033529005671578}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][2] = {'mean':5.745640866583286   ,'std':0.5514983517538955}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][4] = {'mean':5.770193176708002   ,'std':0.6802899279213345}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][6] = {'mean':5.615332105424669   ,'std':1.0852488276574115}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][0] = {'mean':11.712823437972807   ,'std':1.3230869376546968}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][2] = {'mean':11.235299197110264   ,'std':1.7742726001840472}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][4] = {'mean':7.939149293899536   ,'std':2.095285349397584}
+AE_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][6] = {'mean':9.459083005493762   ,'std':2.3850163516430936}
+
 AE_PATH = {}
 for f in FeatureType:
     AE_PATH[f.value] = {}
