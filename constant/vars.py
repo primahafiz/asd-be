@@ -87,6 +87,23 @@ IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][2] = {'mean':740
 IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][4] = {'mean':562.7903314208984 ,'std':106.5052749702296}
 IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][6] = {'mean':732.5788604137945 ,'std':225.02054280057348}
 
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][0] = {'mean':10.859665709026789  ,'std':3.81141161892206}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][2] = {'mean':12.426837841669718   ,'std':5.525098692469147}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][4] = {'mean':13.039303382237753  ,'std':7.687970100234219}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][6] = {'mean':10.580167977015178   ,'std':3.95782499340724}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][0] = {'mean':11.46715271338988   ,'std':4.883634890339186}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][2] = {'mean':12.498674299483909   ,'std':3.767104219082907}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][4] = {'mean':13.339369891734606  ,'std':3.9372256232921847}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][6] = {'mean':12.764654777266763  ,'std':4.864927864881787}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][0] = {'mean':7.3483967781066895  ,'std':1.7598609543727035}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][2] = {'mean':6.1018389936265995  ,'std':0.6824203777717801}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][4] = {'mean':5.770696489290259  ,'std':0.6815690250573724}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][6] = {'mean':6.179108450147841  ,'std':1.5188924649335098}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][0] = {'mean':12.008172075513382  ,'std':1.418887325562146}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][2] = {'mean':11.14604400287975  ,'std':1.7266334595194077}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][4] = {'mean':7.953440008163452  ,'std':2.3088967849205333}
+IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][6] = {'mean':9.738179038552676   ,'std':2.45307160203343}
+
 IDNN_PATH = {}
 for f in FeatureType:
     IDNN_PATH[f.value] = {}
@@ -122,6 +139,23 @@ UNET_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][0] = {'mean':804
 UNET_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][2] = {'mean':581.6889881480823 ,'std':204.2897792729988}
 UNET_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][4] = {'mean':573.8050891113281,'std':118.22501887502781}
 UNET_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][6] = {'mean':673.4198153626685 ,'std':673.4198153626685 }
+
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][0] = {'mean':6.546152947312694,'std':1.5782103638046736}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][2] = {'mean':8.258123254776,'std':1.9625969409708295}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][4] = {'mean':7.399481081962586 ,'std':1.9170007153446356}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][6] = {'mean':6.964283474286398,'std':1.2519733585158328}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][0] = {'mean':7.96979637896077 ,'std':2.5991325798298144}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][2] = {'mean':6.985688883559148 ,'std':1.4428771067391046}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][4] = {'mean':12.496844055947292 ,'std':2.9071935630233607}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][6] = {'mean':10.264550783417441 ,'std':2.9635733593878135}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][0] = {'mean':6.461556037658541,'std':1.284913454558021}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][2] = {'mean':4.224566636804762,'std':0.2574060807027397}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][4] = {'mean':4.374068834315771,'std':0.3829215224240193}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][6] = {'mean':4.7514107240570915 ,'std':0.8484633825427739}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][0] = {'mean':8.2439872244714 ,'std':0.7795831509369724}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][2] = {'mean':7.710004312341863 ,'std':0.9449543845911139}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][4] = {'mean':5.041432113647461 ,'std':0.7289398107304101}
+UNET_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][6] = {'mean':7.176342094645781 ,'std':1.683630987014549}
 
 UNET_PATH = {}
 for f in FeatureType:
