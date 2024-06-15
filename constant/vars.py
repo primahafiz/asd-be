@@ -35,21 +35,36 @@ UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.VALVE.value][0] = {'mea
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.VALVE.value][2] = {'mean':395.96305185953776,'std':92.52358849201727}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.VALVE.value][4] = {'mean':428.59117228190104,'std':421.3530403126358}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.VALVE.value][6] = {'mean':452.3229726155599,'std':144.18799129346291}
-
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.SLIDER.value][0] = {'mean':437.48609890026995,'std':154.49557077966782}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.SLIDER.value][2] = {'mean':590.7560025552161,'std':149.19999090253478}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.SLIDER.value][4] = {'mean':1024.1824882593048,'std':1024.1824882593048}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.SLIDER.value][6] = {'mean':1163.0921020507812,'std':245.39268309626834}
-
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.FAN.value][0] = {'mean':714.4152077360106,'std':159.82165630540823}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.FAN.value][2] = {'mean':1102.621286743846,'std':85.26187933385148}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.FAN.value][4] = {'mean':1016.6967120992726 ,'std':105.55936238788759}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.FAN.value][6] = {'mean':627.749743991428,'std':116.23654804008561}
-
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][0] = {'mean':951.870527240592 ,'std':239.97757551958415}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][2] = {'mean':644.7364274458452 ,'std':216.13348517217617}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][4] = {'mean':572.7998529052734,'std':117.16903048410492}
 UNET_IDNN_STATS[FeatureType.GAMMATONE.value][MachineType.PUMP.value][6] = {'mean':657.8441042432598,'std':224.00959825005597}
+
+
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][0] = {'mean':7.344470864635403 ,'std':1.7372015311575322}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][2] = {'mean':10.23103739420573 ,'std':2.1047613308762667}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][4] = {'mean':7.723872184753418 ,'std':1.8700253328216208}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.VALVE.value][6] = {'mean':8.055501159032186 ,'std':1.1109940705682366}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][0] = {'mean':7.691783205846722 ,'std':1.9341410499029017}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][2] = {'mean':8.300472460295024,'std':1.5524378318605996}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][4] = {'mean':10.621601024370515 ,'std':2.595842290125438}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.SLIDER.value][6] = {'mean':9.399896719238974 ,'std':2.41773771163754}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][0] = {'mean':6.523092305131733 ,'std':0.7983303862227644}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][2] = {'mean':5.281360061475018 ,'std':0.20048882132467952}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][4] = {'mean':5.697598471038643 ,'std':0.3747136504016898}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.FAN.value][6] = {'mean':4.864970829751757 ,'std':0.37499041942016276}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][0] = {'mean':10.581206113519803 ,'std':1.048651791292482}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][2] = {'mean':8.213307432694869 ,'std':0.9894961618143387}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][4] = {'mean':6.277298126220703 ,'std':0.8695597183496044}
+UNET_IDNN_STATS[FeatureType.LOGMEL.value][MachineType.PUMP.value][6] = {'mean':7.8881736736671595 ,'std':1.6856502244240414}
 
 UNET_IDNN_PATH = {}
 for f in FeatureType:
