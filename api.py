@@ -47,7 +47,11 @@ async def process(
         f.write(content)
     
     # Extract spectrogram
-    bytesImage = getImageSpectrogram(convertSpectrogramToVisualizedForm(extractGammatoneFromPath(newFilePath)))
+    bytesImage = []
+    if feature == FeatureType.GAMMATONE.value:
+        bytesImage = getImageSpectrogram(convertSpectrogramToVisualizedForm(extractGammatoneFromPath(newFilePath)))
+    elif feature == FeatureType.LOGMEL.value:
+        bytesImage = getImageSpectrogram(convertSpectrogramToVisualizedForm(extractLogMelFromPath(newFilePath)))
 
     # Inference
     loss = 0

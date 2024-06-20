@@ -5,7 +5,12 @@ from feature import *
 from torchvision.transforms import ToTensor
 
 def inferenceUNetIDNN(featureType: FeatureType, machineType: MachineType, id: int, audioFilePath: str):
-    model = UNetIdnn(NUM_LAYER_UNETIDNN_GAMMATONE)
+    model = None
+    if featureType.value == FeatureType.GAMMATONE.value:
+        model = UNetIdnn(NUM_LAYER_UNETIDNN_GAMMATONE)
+    elif featureType.value == FeatureType.LOGMEL.value:
+        model = UNetIdnn(NUM_LAYER_UNETIDNN_LOGMEL)
+        
     model.load_state_dict(torch.load(UNET_IDNN_PATH[featureType.value][machineType.value][id],map_location=torch.device('cpu')))
 
     model.eval()
