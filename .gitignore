@@ -1,7 +1,6 @@
 # Custom
 env-gammatone/
-data/tmp/*.wav
-data/tmp/*.png
+data/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
