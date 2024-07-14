@@ -71,5 +71,5 @@ async def process(
         'threshold':float(threshold)
     }
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=int(sys.argv[1]))
+def startAPI():
+    uvicorn.run(app, host="localhost", port=8000)

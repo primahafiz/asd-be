@@ -1,0 +1,13 @@
+model :
+  epoch : 200
+  lr : 0.001
+  cuda: false
+  save_path : ./saved-model
+data :
+  normal :
+    - data/sample/test/normal
+  abnormal :
+    - data/sample/test/abnormal
+general :
+  seed : 999
+  verbose_period_extract: 1
