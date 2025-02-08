@@ -15,3 +15,6 @@ Aims to identify machine's condition based on its sound to classify a machine as
 1. Install requirements </br>
 ```pip install requirements.txt```
 2. Run command in ```scripts``` folder
+
+## Frontend
+https://github.com/primahafiz/asd-fe
